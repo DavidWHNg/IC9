@@ -79,11 +79,11 @@ preload_images = [
     cue1_colour = "blue";
     cue2_colour = "red";
 
-  console.log('group ' + group);
-  console.log('group ' + groupname);
-  console.log('cb ' + cb);
-  console.log('stim 1 ' + cue1_colour);
-  console.log(num_random)
+  // console.log('group ' + group);
+  // console.log('group ' + groupname);
+  // console.log('cb ' + cb);
+  // console.log('stim 1 ' + cue1_colour);
+  // console.log(num_random)
 
 
   var demographics_age = {
@@ -453,15 +453,15 @@ for (var j = 1; j <= num_training_trialblocks; j++) {
       temp_training_blockorder_1 = jsPsych.randomization.shuffle(temp_training_blockorder_1);
       timeline_training_trials_phase1 = timeline_training_trials_phase1.concat(temp_training_blockorder_1);
 
-      temp_training_blockorder_1b = jsPsych.randomization.shuffle(temp_training_blockorder_1);
+      temp_training_blockorder_1b = jsPsych.randomization.shuffle(temp_training_blockorder_1b);
       timeline_training_trials_phase2 = timeline_training_trials_phase2.concat(temp_training_blockorder_1b);
 
     } else if (cb == 3) {
-      temp_training_blockorder_1b = jsPsych.randomization.shuffle(temp_training_blockorder_1);
-      timeline_training_trials_phase1b = timeline_training_trials_phase1.concat(temp_training_blockorder_1b);
+      temp_training_blockorder_1b = jsPsych.randomization.shuffle(temp_training_blockorder_1b);
+      timeline_training_trials_phase1 = timeline_training_trials_phase1.concat(temp_training_blockorder_1b);
 
       temp_training_blockorder_1 = jsPsych.randomization.shuffle(temp_training_blockorder_1);
-      timeline_training_trials_phase1 = timeline_training_trials_phase1.concat(temp_training_blockorder_1);
+      timeline_training_trials_phase2 = timeline_training_trials_phase2.concat(temp_training_blockorder_1);
     }
  
     // use second contingency (null) and randomize block again for phase 3
